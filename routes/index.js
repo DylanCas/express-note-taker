@@ -18,7 +18,7 @@ routes.post('/notes',(req,res) => {
     newNote.id = uuidv4()
     readFile('db/db.json')
     .then(data =>{
-        // takes out of json to regular javascript
+        // takes json format and converts to a sort of object
         return JSON.parse(data)
     }) .then(db => {
         db.push(newNote)
