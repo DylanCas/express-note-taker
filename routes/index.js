@@ -30,8 +30,25 @@ routes.post('/notes',(req,res) => {
     })
 })
 
+/* TODO: figure out the delete route
+// have tried to use the path module and a file path variable to declare db/db.json, in that case nothing happened. Before that, a new file would be created "db.db.json", which did contain the leftover notes, but that file of course was not read by the app. 
 routes.delete('/notes/:id',(req,res) => {
-
+    // gets the id of the note to be deleted
+    const id = req.params.id;
+    readFile('db/db.json')
+    .then(data =>{
+        return JSON.parse(data)
+    }) .then(db => {
+        // filter the db array to create the leftoverNotes array
+        const leftoverNotes = db.filter(note => note.id !== id);
+        // replace the db array with the leftoverNotes array
+        db = leftoverNotes;
+        return writeFile('db/db.json', JSON.stringify(db))
+    }).then(response => {
+        // send the modified db array as the response
+        res.json(db)
+    })
 })
+*/
 
 module.exports = routes
