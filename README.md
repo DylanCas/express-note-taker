@@ -21,7 +21,7 @@ npm i
 
 ## Usage 
 
-Launch at the provided link(to be added), where you will be placed at the landing page. Press get started where you can select, create, and soon delete notes.
+Launch at the provided link(https://express-notes.herokuapp.com/), where you will be placed at the landing page. Press get started where you can select, create, and soon delete notes.
 ## License
     
 This project is licensed under the MIT license.
